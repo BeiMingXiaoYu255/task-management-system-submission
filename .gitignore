@@ -1,0 +1,49 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+dist-ssr/
+Backend/.venv/
+Backend/build/
+Backend/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== 桌面端构建 =====
+Frontend/src-tauri/target/
+Frontend/src-tauri/gen/
+
+# ===== 本地运行时与数据 =====
+Runtime/
+.devdata/
+Backend/.env
+*.log
+*.pid
+
+# ===== 安装包产物 =====
+release/
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.deb
+
+# ===== 编辑器/系统文件 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===== 测试产物 =====
+Frontend/test-results/
+Frontend/playwright-report/
+Frontend/coverage/
+
+# ===== 交付物草稿与渲染预览 =====
+deliverables/drafts/
+deliverables/**/preview/
+deliverables/05_GitHistory/*.zip
+deliverables/05_GitHistory/*.bundle
+deliverables/*.zip

@@ -1,0 +1,84 @@
+/** 顶栏样式：56px 固定高度、底部细边框、随内容滚动吸顶。 */
+
+.topBar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--topbar-height);
+  padding: 0 var(--space-4);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-medium);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.iconButton:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.textButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 32px;
+  padding: 0 var(--space-2);
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.textButton:hover:not(:disabled) {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.textButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .topBar {
+    padding: 0 var(--space-2);
+  }
+
+  .actionLabel {
+    display: none;
+  }
+}

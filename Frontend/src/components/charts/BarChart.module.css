@@ -1,0 +1,21 @@
+/** 柱状图容器样式。 */
+
+.chart {
+  width: 100%;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) 0;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-small);
+}

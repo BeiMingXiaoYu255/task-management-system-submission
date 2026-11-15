@@ -1,0 +1,49 @@
+/** 应用外壳样式：固定侧边栏 + 主内容区，≤900px 单列。 */
+
+.shell {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-fast);
+}
+
+.main[data-collapsed='true'] {
+  margin-left: var(--sidebar-width-collapsed);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
+.contentInner {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-5);
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: var(--color-scrim);
+}
+
+@media (max-width: 900px) {
+  .main,
+  .main[data-collapsed='true'] {
+    margin-left: 0;
+  }
+
+  .contentInner {
+    padding: var(--space-4);
+  }
+}

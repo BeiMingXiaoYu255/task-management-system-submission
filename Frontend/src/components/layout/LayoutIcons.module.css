@@ -1,0 +1,6 @@
+/** 布局图标通用样式：块级展示、禁止收缩，颜色随父级 currentColor。 */
+
+.icon {
+  display: block;
+  flex-shrink: 0;
+}
