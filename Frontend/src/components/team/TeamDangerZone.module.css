@@ -1,0 +1,55 @@
+/* 团队危险操作区样式：危险色仅用于文字与边框。 */
+
+.dangerSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dangerTitle {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+  color: var(--color-danger);
+}
+
+.dangerDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.dangerItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dangerItemHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dangerItemName {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.dangerItemDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+}

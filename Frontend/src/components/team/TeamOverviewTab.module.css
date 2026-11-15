@@ -1,0 +1,121 @@
+/* 团队概览 Tab 样式。 */
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pendingHint,
+.rejectedHint {
+  font-size: var(--font-size-small);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-left-width: 3px;
+  border-radius: var(--radius-small);
+  color: var(--color-text-secondary);
+  background: var(--color-surface-raised);
+}
+
+.rejectedHint {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-5);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.infoLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.infoValue {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.descriptionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.descriptionTitle {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.descriptionText {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.permissionList,
+.levelList {
+  display: flex;
+  flex-direction: column;
+}
+
+.permissionItem,
+.levelItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-base);
+}
+
+.permissionItem:last-child,
+.levelItem:last-child {
+  border-bottom: none;
+}
+
+.permissionName,
+.levelName {
+  color: var(--color-text);
+}
+
+.permissionValue,
+.levelMeta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

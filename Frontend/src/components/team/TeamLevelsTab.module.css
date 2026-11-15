@@ -1,0 +1,6 @@
+/* 级别 Tab 外层间距。 */
+
+.levelsTab {
+  display: flex;
+  flex-direction: column;
+}

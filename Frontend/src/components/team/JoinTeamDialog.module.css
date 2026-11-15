@@ -1,0 +1,19 @@
+/* 加入团队弹窗样式。 */
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

@@ -1,0 +1,82 @@
+/* 任务审核面板样式。 */
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.sectionHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.emptyHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.reviewItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface-raised);
+}
+
+.memberRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.memberName {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.memberMeta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.stageHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

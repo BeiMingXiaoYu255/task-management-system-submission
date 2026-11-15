@@ -1,0 +1,58 @@
+/* 团队详情-协作 Tab 样式。 */
+
+.tabBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+}
+
+.sectionDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.permissionHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.collaborationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  justify-content: space-between;
+  color: var(--color-danger);
+}

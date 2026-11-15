@@ -1,0 +1,128 @@
+/* 任务详情页样式：主栏与侧栏两列布局，窄屏单列。 */
+
+.breadcrumb {
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumbLink {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.headerBadges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.detailLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.mainColumn,
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sideSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sideTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.myAssignmentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.myAssignmentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.reviewCommentText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface-raised);
+  white-space: pre-wrap;
+}
+
+.timeList {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeItem:last-child {
+  border-bottom: none;
+}
+
+.timeLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.timeValue {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.loadingBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .detailLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

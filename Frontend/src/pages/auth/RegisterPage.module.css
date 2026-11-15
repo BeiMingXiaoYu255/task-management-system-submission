@@ -1,0 +1,28 @@
+/** 注册页样式：与登录页保持一致的间距与错误提示样式。 */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formError {
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
+
+.footerLink {
+  margin-left: var(--space-1);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footerLink:hover {
+  color: var(--color-text-secondary);
+}

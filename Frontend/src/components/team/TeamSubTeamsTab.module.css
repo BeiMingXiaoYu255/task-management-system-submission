@@ -1,0 +1,7 @@
+/* 团队详情-子团队 Tab 样式。 */
+
+.tabBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

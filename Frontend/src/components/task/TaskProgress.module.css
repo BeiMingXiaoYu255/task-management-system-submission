@@ -1,0 +1,72 @@
+/* 任务执行进度样式：标题行、进度条与执行人列表。 */
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.progressHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.progressTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.progressSummary {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+}
+
+.emptyHint {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-small);
+}
+
+.assignmentList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.assignmentItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.assignmentItem:last-child {
+  border-bottom: none;
+}
+
+.assignmentMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.assignmentName {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.assignmentComment {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

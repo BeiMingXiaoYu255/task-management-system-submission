@@ -1,0 +1,108 @@
+/* 入团申请审批面板样式。 */
+
+.requestSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.sectionHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  color: var(--color-danger);
+  justify-content: space-between;
+}
+
+.requestList {
+  display: flex;
+  flex-direction: column;
+}
+
+.requestItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.requestItem:last-child {
+  border-bottom: none;
+}
+
+.requestMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.requestName {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.requestUsername {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.requestMessage {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  word-break: break-word;
+}
+
+.requestTime {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.requestActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .requestItem {
+    flex-direction: column;
+  }
+
+  .requestActions {
+    align-self: flex-end;
+  }
+}

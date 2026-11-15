@@ -1,0 +1,30 @@
+/* 任务中心页样式。 */
+
+.roleTabs {
+  margin-bottom: var(--space-3);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  justify-content: space-between;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-medium);
+}

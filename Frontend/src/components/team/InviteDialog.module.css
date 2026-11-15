@@ -1,0 +1,68 @@
+/* 邀请码弹窗样式。 */
+
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.warningHint {
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+}
+
+.currentSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-raised);
+}
+
+.sectionLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.codeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.inviteCode {
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-base);
+  letter-spacing: 0.08em;
+  padding: var(--space-1) var(--space-2);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+}
+
+.formSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .formSection {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

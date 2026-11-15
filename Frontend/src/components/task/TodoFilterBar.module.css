@@ -1,0 +1,50 @@
+/* 待办筛选栏样式。 */
+
+.filterBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-raised);
+}
+
+.filterRow {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.sortOrderBox,
+.refreshBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: 2px;
+}
+
+.sortOrderLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .filterRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sortOrderBox,
+  .refreshBox {
+    align-items: flex-start;
+  }
+}

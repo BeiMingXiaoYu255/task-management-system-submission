@@ -1,0 +1,19 @@
+/* 调整成员级别弹窗样式。 */
+
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.memberInfo {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

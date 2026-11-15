@@ -1,0 +1,118 @@
+/* 任务卡片样式：细边框、灰阶、逾期左侧暗红提示。 */
+
+.taskCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+  transition: border-color var(--transition-fast);
+}
+
+.taskCard:hover {
+  border-color: var(--color-border-strong);
+}
+
+.overdueCard {
+  border-left: 2px solid var(--color-danger);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.titleLink {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+  color: var(--color-text);
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.titleLink:hover {
+  text-decoration: underline;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sourceTagRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.metaItem {
+  white-space: nowrap;
+}
+
+.overdueText {
+  color: var(--color-danger);
+  white-space: nowrap;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.detailLink {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.detailLink:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .cardHeader {
+    flex-direction: column;
+  }
+}
