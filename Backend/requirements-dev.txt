@@ -1,0 +1,6 @@
+# ===== 开发与测试依赖（在 requirements.txt 基础上追加） =====
+-r requirements.txt
+pytest>=8.3,<9.0
+pytest-cov>=6.0,<7.0
+httpx>=0.28,<1.0
+pyinstaller>=6.11,<7.0

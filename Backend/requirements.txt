@@ -1,0 +1,18 @@
+# ===== 任务管理系统后端运行依赖 =====
+# FastAPI Web 框架与 ASGI 服务器
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32,<1.0
+# 数据库 ORM 与 MySQL 驱动
+SQLAlchemy>=2.0,<3.0
+PyMySQL>=1.1,<2.0
+cryptography>=43,<46
+# 配置与数据校验
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6,<3.0
+# 身份认证与密码哈希
+PyJWT>=2.9,<3.0
+bcrypt>=4.2,<5.0
+# Redis 客户端
+redis>=5.1,<7.0
+# 文件上传/表单
+python-multipart>=0.0.12,<1.0
