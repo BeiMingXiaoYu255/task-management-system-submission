@@ -1,0 +1,12 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "桌面端主窗口与便签窗口默认权限（自定义命令不受 ACL 限制）",
+  "windows": [
+    "main",
+    "sticky"
+  ],
+  "permissions": [
+    "core:default"
+  ]
+}

@@ -1,0 +1,11 @@
+# 由 Cargo 生成的编译产物
+/target/
+/gen/schemas
+
+# 打包时由 scripts/buildWindowsInstaller.ps1 注入的资源（后端可执行文件、便携运行时、前端构建产物）
+/resources/backend/*
+!/resources/backend/.gitkeep
+/resources/runtime/*
+!/resources/runtime/.gitkeep
+/resources/frontend/*
+!/resources/frontend/.gitkeep

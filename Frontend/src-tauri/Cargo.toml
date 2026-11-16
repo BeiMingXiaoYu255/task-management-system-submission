@@ -1,0 +1,25 @@
+[package]
+name = "task-management-desktop"
+version = "1.2.2"
+description = "任务管理系统桌面客户端外壳（Tauri 2）"
+authors = ["Task Management System Team"]
+license = ""
+repository = ""
+edition = "2024"
+rust-version = "1.90"
+
+# 库目标：入口 main.rs 调用库中的 run()，同时便于后续复用与测试
+[lib]
+name = "task_management_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+# 构建脚本依赖：生成 Tauri 上下文与权限 schema
+[build-dependencies]
+tauri-build = { version = "2.7.6", features = [] }
+
+[dependencies]
+# 序列化：前端命令返回值与 JSON 处理
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Tauri 2 桌面外壳与窗口/进程编排
+tauri = { version = "2.12.7", features = [] }
