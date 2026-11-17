@@ -1,0 +1,39 @@
+/* 通知中心：筛选工具栏 + 列表卡片 + 分页。 */
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.aiStatusArea {
+  margin-top: var(--space-4);
+}
+
+.tabsArea {
+  margin-top: var(--space-4);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+}
+
+.listArea {
+  min-height: 200px;
+}
+
+.paginationArea {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .headerActions {
+    flex-wrap: wrap;
+  }
+}
