@@ -1,0 +1,120 @@
+/** 数据库面板样式。 */
+
+.databaseLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.browseLayout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .browseLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.tableListPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: var(--space-3);
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.tableDataPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.panelTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.dataHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.tableList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tableListItem,
+.tableListItemActive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-small);
+  background: transparent;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.tableListItem:hover {
+  background: var(--color-hover);
+}
+
+.tableListItemActive {
+  border-color: var(--color-border-strong);
+  background: var(--color-active);
+}
+
+.tableName {
+  font-size: var(--font-size-small);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowCount {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.listState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  color: var(--color-text-secondary);
+}
+
+.emptyText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.cellText {
+  font-size: var(--font-size-small);
+  word-break: break-all;
+}

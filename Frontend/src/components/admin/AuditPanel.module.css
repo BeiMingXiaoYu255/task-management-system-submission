@@ -1,0 +1,30 @@
+/** 审计日志面板样式。 */
+
+.panelLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stateArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-7) 0;
+  color: var(--color-text-secondary);
+}
+
+.operatorName {
+  font-weight: 500;
+}
+
+.detailText {
+  display: block;
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+}

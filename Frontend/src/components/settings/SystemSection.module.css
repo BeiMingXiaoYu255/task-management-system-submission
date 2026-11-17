@@ -1,0 +1,106 @@
+/** 系统信息区块样式。 */
+
+.systemLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.loadingArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  color: var(--color-text-secondary);
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.infoBlock:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blockTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.blockDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.infoLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.infoValue {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.emptyText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.addressRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-raised);
+}
+
+.addressText {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  word-break: break-all;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}

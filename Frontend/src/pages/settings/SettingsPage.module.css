@@ -1,0 +1,12 @@
+/** 系统设置页面样式。 */
+
+/* 页面根节点：宽度撑满 AppShell 内容区 */
+.pageRoot {
+  width: 100%;
+}
+
+.settingsStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

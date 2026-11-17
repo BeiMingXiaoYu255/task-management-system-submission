@@ -1,0 +1,248 @@
+/**
+ * AI 配置区块样式：灰阶信息网格、细边框表单与低饱和测试结果。
+ * 所有颜色来自 tokens.css 的 CSS 变量，深色模式随主题自动适配。
+ */
+
+.sectionLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* 加载 / 错误 / 空态 */
+
+.stateBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-5) 0;
+}
+
+.stateText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+}
+
+.errorText {
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+  text-align: center;
+}
+
+/* 只读状态摘要 */
+
+.summaryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.blockTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3) var(--space-4);
+  margin: 0;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.summaryLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.summaryValue {
+  margin: 0;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.summaryMeta {
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-border);
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.permissionNotice {
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-raised);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+/* 编辑表单 */
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.formHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.formHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.fieldFull {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding-top: var(--space-1);
+}
+
+.actionHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.testingHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+/* 连通性测试结果 */
+
+.testResult {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-raised);
+}
+
+.testHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.testTitle {
+  font-size: var(--font-size-small);
+  font-weight: 650;
+}
+
+.testTime {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.testRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+}
+
+.testName {
+  min-width: 96px;
+  color: var(--color-text-secondary);
+}
+
+.testMessage {
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+/* 失败信息使用低饱和危险色 */
+.testFailure {
+  color: var(--color-danger);
+  overflow-wrap: anywhere;
+}
+
+.testLatency {
+  color: var(--color-text-tertiary);
+}
+
+.testPreview {
+  margin: 0;
+  padding: var(--space-2);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+/* ≤900px 时表单与测试结果改为单列，避免字段挤压 */
+@media (max-width: 900px) {
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .testName {
+    min-width: 0;
+  }
+}

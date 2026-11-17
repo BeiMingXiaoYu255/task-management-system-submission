@@ -1,0 +1,10 @@
+/** 管理后台页面样式。 */
+
+/* 页面根节点：宽度撑满 AppShell 内容区 */
+.pageRoot {
+  width: 100%;
+}
+
+.panelArea {
+  margin-top: var(--space-4);
+}
