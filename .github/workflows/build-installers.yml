@@ -1,0 +1,110 @@
+name: 构建三平台安装包
+
+# 三平台矩阵构建：Windows（NSIS 安装包）、Linux（AppImage + deb）、macOS（dmg）
+# 触发方式：手动 workflow_dispatch，或推送 v* 标签（例如 v1.0.0）
+# 产物：通过 actions/upload-artifact 上传 release/ 目录下的安装包
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  build-installers:
+    name: 构建 ${{ matrix.display-name }}
+    runs-on: ${{ matrix.platform }}
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: windows-latest
+            display-name: Windows NSIS
+            artifact-name: task-management-windows-nsis
+            artifact-path: |
+              release/*.exe
+          - platform: ubuntu-22.04
+            display-name: Linux AppImage/deb
+            artifact-name: task-management-linux
+            artifact-path: |
+              release/*.AppImage
+              release/*.deb
+          - platform: macos-latest
+            display-name: macOS dmg
+            artifact-name: task-management-macos
+            artifact-path: |
+              release/*.dmg
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Frontend/package-lock.json
+
+      - name: 安装 Rust 稳定版工具链
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: 缓存 Rust 编译产物
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: Frontend/src-tauri -> target
+
+      - name: 安装 Linux 系统依赖（WebKitGTK 等）
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev patchelf libssl-dev pkg-config
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 创建 Python 虚拟环境并安装后端依赖（Windows）
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          python -m venv Backend/.venv
+          Backend/.venv/Scripts/python.exe -m pip install --upgrade pip
+          Backend/.venv/Scripts/python.exe -m pip install -r Backend/requirements-dev.txt
+
+      - name: 创建 Python 虚拟环境并安装后端依赖（Linux/macOS）
+        if: runner.os != 'Windows'
+        run: |
+          python3 -m venv Backend/.venv
+          Backend/.venv/bin/python -m pip install --upgrade pip
+          Backend/.venv/bin/python -m pip install -r Backend/requirements-dev.txt
+
+      - name: 安装前端依赖
+        working-directory: Frontend
+        run: npm ci
+
+      - name: 构建 Windows 安装包（NSIS）
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/buildWindowsInstaller.ps1
+
+      - name: 构建 Linux/macOS 安装包
+        if: runner.os != 'Windows'
+        run: bash scripts/buildInstallers.sh
+
+      - name: 列出构建产物
+        shell: bash
+        run: |
+          ls -lh release/ || true
+
+      - name: 上传安装包产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact-name }}
+          path: ${{ matrix.artifact-path }}
+          if-no-files-found: error
+          retention-days: 14
