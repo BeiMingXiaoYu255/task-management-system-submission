@@ -1,0 +1,76 @@
+/* 单位成员选择器样式：可滚动灰阶列表。 */
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.memberList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+}
+
+.memberItem {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.memberItem:last-child {
+  border-bottom: none;
+}
+
+.memberItem:hover {
+  background: var(--color-hover);
+}
+
+.memberLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.memberName {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.memberMeta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.stateBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-small);
+}
+
+.error {
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+}
+
+.hint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.selectedHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}

@@ -1,0 +1,25 @@
+/* 协作任务确认弹窗样式。 */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.taskTitle {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+  word-break: break-word;
+}
+
+.unitHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

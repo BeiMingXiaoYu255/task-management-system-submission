@@ -1,0 +1,25 @@
+/* 手动指派执行人弹窗样式。 */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.taskTitle {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+  word-break: break-word;
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

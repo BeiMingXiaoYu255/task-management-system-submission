@@ -1,0 +1,103 @@
+/* 协作目录样式：团队卡片 + 子团队行。 */
+
+.directoryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.teamHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.teamName {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+}
+
+.teamMeta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.description {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  word-break: break-word;
+}
+
+.subTeamList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.subTeamItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.subTeamItem:last-child {
+  border-bottom: none;
+}
+
+.subTeamInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.subTeamName {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.subTeamMeta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.emptyHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  justify-content: space-between;
+  color: var(--color-danger);
+}
+
+@media (max-width: 900px) {
+  .subTeamItem {
+    align-items: flex-start;
+  }
+}

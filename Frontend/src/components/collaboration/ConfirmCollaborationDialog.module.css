@@ -1,0 +1,39 @@
+/* 处理协作申请弹窗样式。 */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+}
+
+.unitName {
+  color: var(--color-text);
+}
+
+.arrow {
+  color: var(--color-text-tertiary);
+}
+
+.metaText,
+.messageText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

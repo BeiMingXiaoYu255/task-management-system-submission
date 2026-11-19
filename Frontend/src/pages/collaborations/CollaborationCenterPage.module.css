@@ -1,0 +1,43 @@
+/* 协作中心页面样式。 */
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  max-width: 240px;
+}
+
+.collaborationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  justify-content: space-between;
+  color: var(--color-danger);
+}
+
+@media (max-width: 900px) {
+  .filterRow {
+    max-width: none;
+  }
+}

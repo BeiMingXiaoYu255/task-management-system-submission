@@ -1,0 +1,136 @@
+/* 协作任务详情页样式。 */
+
+.breadcrumb {
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumbLink {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.headerBadges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.detailLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  align-items: start;
+}
+
+.mainColumn,
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.sideSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.sideTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  word-break: break-word;
+}
+
+.commentText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.myAssignmentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.myAssignmentRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.timeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.timeItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.timeLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.timeValue {
+  font-size: var(--font-size-small);
+  color: var(--color-text);
+  text-align: right;
+  word-break: break-word;
+}
+
+.inlineLink {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+.inlineLink:hover {
+  color: var(--color-text);
+}
+
+.loadingBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .detailLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

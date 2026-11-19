@@ -1,0 +1,121 @@
+/* 协作任务列表样式。 */
+
+.taskSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+}
+
+.sectionDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.taskItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.taskItem:hover {
+  border-color: var(--color-border-strong);
+}
+
+.taskHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.titleLink {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.titleLink:hover {
+  text-decoration: underline;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.metaItem {
+  white-space: nowrap;
+}
+
+.overdueText {
+  color: var(--color-danger);
+  white-space: nowrap;
+}
+
+.taskFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.detailLink {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.detailLink:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.loadingBox,
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.errorBox {
+  justify-content: space-between;
+  color: var(--color-danger);
+}

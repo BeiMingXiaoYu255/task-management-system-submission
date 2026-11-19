@@ -1,0 +1,30 @@
+/* 发起协作弹窗样式。 */
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tipText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.liaisonBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.errorText {
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+}

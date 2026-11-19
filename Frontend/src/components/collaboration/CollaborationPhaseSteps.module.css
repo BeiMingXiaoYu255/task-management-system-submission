@@ -1,0 +1,67 @@
+/* 协作任务阶段条样式：灰阶 + 细边框，当前阶段反色强调。 */
+
+.phaseSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.rejectedHint {
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+}
+
+.stepList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.stepIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.completedStep {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.currentStep {
+  color: var(--color-inverse-text);
+  background: var(--color-inverse-bg);
+  border-color: var(--color-inverse-bg);
+}
+
+.currentStep .stepIndex {
+  border-color: var(--color-inverse-text);
+}
+
+@media (max-width: 900px) {
+  .stepList {
+    gap: var(--space-1);
+  }
+}

@@ -1,0 +1,54 @@
+/* 协作详情页样式。 */
+
+.breadcrumb {
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumbLink {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.statusHint,
+.dangerHint {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface-raised);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.dangerHint {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.detailLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.loadingBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
