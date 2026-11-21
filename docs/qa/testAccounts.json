@@ -1,0 +1,101 @@
+[
+  {
+    "username": "superAdmin",
+    "password": "SuperAdmin@123",
+    "globalRole": "superAdmin",
+    "teamName": "",
+    "teamRole": "",
+    "levelName": "",
+    "notes": "内置超级用户：可认证团队、设置全局管理员、管理后台数据库只读浏览"
+  },
+  {
+    "username": "qaGlobalAdmin",
+    "password": "Qa@123456",
+    "globalRole": "globalAdmin",
+    "teamName": "",
+    "teamRole": "",
+    "levelName": "",
+    "notes": "全局管理员：管理后台概览、用户/团队认证、数据库只读浏览、AI 配置"
+  },
+  {
+    "username": "qaTeamAdminA",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Alpha Team",
+    "teamRole": "admin",
+    "levelName": "Senior Member",
+    "notes": "QA Alpha Team 团队管理员：发布/修改/取消/审核任务、生成邀请码、管理成员级别"
+  },
+  {
+    "username": "qaTeamAdminB",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Beta Team",
+    "teamRole": "admin",
+    "levelName": "Senior Member",
+    "notes": "QA Beta Team 团队管理员 + QA Gamma 待认证团队创建者：协作接收方管理员"
+  },
+  {
+    "username": "qaSubAdminA",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Alpha Team",
+    "teamRole": "subAdmin",
+    "levelName": "QA Lead",
+    "notes": "QA Alpha Team 子管理员（自定义级别 QA Lead）：入团审核、邀请码、低级别成员管理"
+  },
+  {
+    "username": "qaMemberA1",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Alpha Team",
+    "teamRole": "member",
+    "levelName": "Intermediate Member",
+    "notes": "QA Alpha Team 普通成员 / Frontend Squad 子负责人：待接受、进行中、已归档、AI 自动分配执行人"
+  },
+  {
+    "username": "qaMemberA2",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Alpha Team",
+    "teamRole": "member",
+    "levelName": "Intermediate Member",
+    "notes": "QA Alpha Team 普通成员：逾期任务、待审核任务执行人；协作发起方对接人"
+  },
+  {
+    "username": "qaMemberB1",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Beta Team",
+    "teamRole": "member",
+    "levelName": "Junior Member",
+    "notes": "QA Beta Team 普通成员（邀请码加入）：待办各状态、协作任务执行人"
+  },
+  {
+    "username": "qaMemberB2",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "QA Beta Team",
+    "teamRole": "member",
+    "levelName": "Junior Member",
+    "notes": "QA Beta Team 普通成员：协作接收方对接人（接收方双审核）"
+  },
+  {
+    "username": "qaApplicantAlpha",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "",
+    "teamRole": "",
+    "levelName": "",
+    "notes": "非成员账号：对 QA Alpha Team 有一条待处理入团申请（用于入团审核测试）"
+  },
+  {
+    "username": "qaDisabledUser",
+    "password": "Qa@123456",
+    "globalRole": "user",
+    "teamName": "",
+    "teamRole": "",
+    "levelName": "",
+    "notes": "已禁用账号：登录返回 ACCOUNT_DISABLED（用于禁用账号与错误提示测试）"
+  }
+]
