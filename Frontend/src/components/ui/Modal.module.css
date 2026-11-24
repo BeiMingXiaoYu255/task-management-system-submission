@@ -1,0 +1,95 @@
+/** 模态对话框样式：半透明遮罩、细边框、极淡阴影。 */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background: var(--color-scrim);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: calc(100vh - 96px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-popup);
+  animation: modalFadeIn 120ms ease;
+}
+
+.small {
+  max-width: 380px;
+}
+
+.medium {
+  max-width: 520px;
+}
+
+.large {
+  max-width: 760px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--font-size-medium);
+  font-weight: 650;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-medium);
+  line-height: 1;
+}
+
+.closeButton:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.body {
+  padding: var(--space-5);
+  overflow-y: auto;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,62 @@
+/** 表格样式：细边框、紧凑行高、表头弱化。 */
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+}
+
+.th {
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border-strong);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.td {
+  padding: var(--space-3);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.stateCell {
+  padding: var(--space-6) var(--space-3);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.loadingBlock {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.clickableRow {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.clickableRow:hover {
+  background: var(--color-hover);
+}

@@ -1,0 +1,51 @@
+/* 通知下拉面板：向右对齐铃铛，窄屏自适应为整行宽度。 */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  max-width: calc(100vw - var(--space-5));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-popup);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerTitle {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+}
+
+.body {
+  min-height: 80px;
+}
+
+.footer {
+  padding: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 600px) {
+  .dropdown {
+    position: fixed;
+    top: calc(var(--topbar-height) + var(--space-2));
+    right: var(--space-2);
+    left: var(--space-2);
+    width: auto;
+    max-width: none;
+  }
+}

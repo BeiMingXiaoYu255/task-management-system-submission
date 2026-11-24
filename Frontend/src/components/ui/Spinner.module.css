@@ -1,0 +1,29 @@
+/** 加载指示器样式：细边框圆弧旋转，颜色继承父级文字颜色。 */
+
+.spinner {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: spinnerRotate 640ms linear infinite;
+}
+
+.small {
+  width: 14px;
+  height: 14px;
+}
+
+.medium {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spinnerRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

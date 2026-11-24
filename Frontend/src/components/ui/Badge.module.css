@@ -1,0 +1,40 @@
+/** 徽标样式：直角微圆角、细边框。 */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border: 1px solid transparent;
+  border-radius: var(--radius-small);
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.default {
+  background: var(--color-surface-raised);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.solid {
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  border-color: var(--color-inverse-bg);
+}
+
+.small {
+  padding: 0 var(--space-1);
+  font-size: var(--font-size-small);
+}
+
+.medium {
+  padding: 1px var(--space-2);
+  font-size: var(--font-size-small);
+}

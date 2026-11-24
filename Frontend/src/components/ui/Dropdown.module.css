@@ -1,0 +1,65 @@
+/** 下拉菜单样式：细边框、极淡弹层阴影。 */
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: var(--radius-small);
+  outline: none;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  min-width: 144px;
+  padding: var(--space-1) 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-popup);
+}
+
+.menuLeft {
+  left: 0;
+}
+
+.menuRight {
+  right: 0;
+}
+
+.menuItem {
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  color: var(--color-text);
+  border: none;
+  font-size: var(--font-size-base);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.menuItem:hover:not(:disabled) {
+  background: var(--color-hover);
+}
+
+.menuItem:disabled {
+  color: var(--color-text-tertiary);
+  cursor: not-allowed;
+}
+
+.dangerItem {
+  color: var(--color-danger);
+}

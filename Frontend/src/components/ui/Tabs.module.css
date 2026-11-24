@@ -1,0 +1,37 @@
+/** 页签样式：下划线指示当前项。 */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.tabItem {
+  position: relative;
+  padding: var(--space-2) 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+  margin-bottom: -1px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.tabItem:hover:not(:disabled) {
+  color: var(--color-text);
+}
+
+.tabItem:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.activeTabItem {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+  font-weight: 500;
+}

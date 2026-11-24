@@ -1,0 +1,57 @@
+/* 通知铃铛：与顶栏其他图标按钮保持一致的尺寸与悬停态。 */
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.bellButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-medium);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.bellButton:hover,
+.bellButton[aria-expanded='true'] {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.badge {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  border: 1px solid var(--color-bg);
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 650;
+}
+
+.errorDot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border: 1px solid var(--color-danger);
+  border-radius: 50%;
+}

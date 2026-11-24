@@ -1,0 +1,54 @@
+/** 统计卡片组样式：五列自适应网格，窄屏自动折行。 */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 1100px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.statCard {
+  min-width: 0;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.statLabel {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.statValue {
+  font-size: var(--font-size-title);
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.statValueDanger {
+  font-size: var(--font-size-title);
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--color-danger);
+}
+
+.statDescription {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}

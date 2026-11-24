@@ -1,0 +1,13 @@
+/** 二次确认对话框样式。 */
+
+.description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-base);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}

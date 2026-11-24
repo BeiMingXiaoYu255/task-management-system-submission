@@ -1,0 +1,9 @@
+/** 趋势面板样式。 */
+
+.panelBody {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) 0;
+}

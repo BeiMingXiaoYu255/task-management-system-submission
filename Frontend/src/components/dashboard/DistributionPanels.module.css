@@ -1,0 +1,21 @@
+/** 分布图组样式：两列等宽面板，窄屏单列。 */
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .panelGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.panelBody {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) 0;
+}

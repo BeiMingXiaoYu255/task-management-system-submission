@@ -1,0 +1,48 @@
+/** 卡片样式：细边框、微圆角、无阴影。 */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: 650;
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.none {
+  padding: 0;
+}
+
+.small {
+  padding: var(--space-3);
+}
+
+.medium {
+  padding: var(--space-5);
+}
+
+.large {
+  padding: var(--space-6);
+}
+
+.bodyWithHeader {
+  padding-top: 0;
+}

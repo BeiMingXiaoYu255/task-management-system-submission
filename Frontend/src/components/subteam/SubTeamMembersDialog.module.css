@@ -1,0 +1,31 @@
+/* 子团队成员维护弹窗样式。 */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hintText {
+  font-size: var(--font-size-small);
+  color: var(--color-text-tertiary);
+}
+
+.errorBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-small);
+  color: var(--color-danger);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
