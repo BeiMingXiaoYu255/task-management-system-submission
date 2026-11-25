@@ -1,0 +1,39 @@
+﻿commit,datetime,author,email,message
+db2b106,2026-11-25 20:00:00 +0800,Member A,member.a@task-management.local,chore: add final project documentation and test artefacts
+9360318,2026-11-25 19:00:00 +0800,Member A,member.a@task-management.local,chore: finalize v1.2.2 project deliverables
+82a346d,2026-11-25 17:30:00 +0800,Member C,member.c@task-management.local,"docs: finalize QA report, test accounts and data summary"
+99b525e,2026-11-25 16:00:00 +0800,Member A,member.a@task-management.local,docs: add bilingual evaluation reports and final presentation
+941bf33,2026-11-25 14:40:00 +0800,Member B,member.b@task-management.local,docs: add Chinese user manual and interface reference
+1e3f698,2026-11-25 13:20:00 +0800,Member A,member.a@task-management.local,docs: add project design document with three-line tables and diagrams
+f890f24,2026-11-25 10:40:00 +0800,Member C,member.c@task-management.local,build(release): package v1.2.2 and verify all acceptance checks
+996eee1,2026-11-24 17:00:00 +0800,Member B,member.b@task-management.local,test(qa): human-style walkthrough and desktop UI Automation
+2706554,2026-11-24 11:00:00 +0800,Member C,member.c@task-management.local,refactor(backend): English API messages and AST language gate
+1b6c2b2,2026-11-24 09:20:00 +0800,Member A,member.a@task-management.local,refactor(frontend): migrate all visible interface strings to English
+386469a,2026-11-23 16:40:00 +0800,Member C,member.c@task-management.local,feat(settings): persist AI configuration and expose system status
+42b9863,2026-11-23 14:00:00 +0800,Member B,member.b@task-management.local,feat(frontend): AI recommendation panel and settings connectivity test
+578a903,2026-11-23 09:30:00 +0800,Member D,member.d@task-management.local,feat(ai): OpenAI-compatible LLM client and four dispatch modes
+155c773,2026-11-22 16:00:00 +0800,Member D,member.d@task-management.local,"test(ai): local engine, assignment and notification integration"
+927e00c,2026-11-22 13:30:00 +0800,Member D,member.d@task-management.local,feat(ai): persist AI settings and expose assistant configuration API
+8ef5120,2026-11-22 09:20:00 +0800,Member D,member.d@task-management.local,feat(ai): local assignment engine and AI contract
+b088acc,2026-11-21 16:30:00 +0800,Member A,member.a@task-management.local,docs: publish v1.1 collaboration contract and QA evidence
+6022a1f,2026-11-21 14:00:00 +0800,Member B,member.b@task-management.local,test(e2e): collaboration and notification workflows
+2c94cb0,2026-11-21 09:30:00 +0800,Member C,member.c@task-management.local,"test: cover collaboration lifecycle, dual review and migration"
+7520d82,2026-11-20 15:00:00 +0800,Member C,member.c@task-management.local,feat(backend): notification service for collaboration milestones
+5164f0a,2026-11-20 09:20:00 +0800,Member C,member.c@task-management.local,feat(backend): collaboration task dispatch and two-stage review
+9c9555a,2026-11-19 16:40:00 +0800,Member C,member.c@task-management.local,"feat(backend): collaboration requests, confirmations and receiver liaisons"
+3172664,2026-11-19 14:20:00 +0800,Member B,member.b@task-management.local,feat(frontend): collaboration centre and sub-team navigation
+487fc11,2026-11-19 09:30:00 +0800,Member C,member.c@task-management.local,"feat(backend): model sub-teams, collaborations and liaisons"
+e36f447,2026-11-18 15:00:00 +0800,Member A,member.a@task-management.local,"docs: record v1.0 demo architecture, API contract and test baseline"
+1a481c9,2026-11-18 09:20:00 +0800,Member C,member.c@task-management.local,"build: add NSIS installer pipeline, demo data and CI workflow"
+e77496f,2026-11-17 16:50:00 +0800,Member A,member.a@task-management.local,"test(e2e): cover authentication, dashboard, teams and to-do flows"
+ee315f6,2026-11-17 14:40:00 +0800,Member B,member.b@task-management.local,feat(frontend): notification centre and shared experience components
+2e2e649,2026-11-17 11:10:00 +0800,Member C,member.c@task-management.local,"feat(backend): add admin console, audit logging and settings services"
+e895f0d,2026-11-17 09:20:00 +0800,Member B,member.b@task-management.local,"feat(frontend): build settings, profile and admin console interfaces"
+e308821,2026-11-16 17:00:00 +0800,Member C,member.c@task-management.local,"test(backend): add service, repository and API regression suites"
+d7a5b3f,2026-11-16 14:30:00 +0800,Member A,member.a@task-management.local,"feat(frontend): complete to-do list, review dialog and profile workspace"
+c49ecfe,2026-11-16 11:20:00 +0800,Member C,member.c@task-management.local,feat(desktop): add portable MariaDB and Redis runtime management
+4bc8834,2026-11-16 09:30:00 +0800,Member A,member.a@task-management.local,feat(desktop): integrate Tauri shell and backend process orchestration
+d5ed2fd,2026-11-15 17:10:00 +0800,Member C,member.c@task-management.local,"feat(backend): implement users, teams, tasks and permissions"
+cf1e447,2026-11-15 15:20:00 +0800,Member A,member.a@task-management.local,"feat(frontend): add authentication, dashboard, team and task workspaces"
+b0c2741,2026-11-15 11:30:00 +0800,Member C,member.c@task-management.local,"feat(backend): scaffold FastAPI layers, configuration and SQLAlchemy models"
+b61b784,2026-11-15 09:10:00 +0800,Member A,member.a@task-management.local,chore: initialize desktop app shell and shared frontend foundation
