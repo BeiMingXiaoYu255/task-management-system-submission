@@ -1,0 +1,366 @@
+:root {
+    --bg: #f5f6fa;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --danger: #dc2626;
+    --border: #e5e7eb;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.app-header {
+    background: linear-gradient(120deg, #1e3a8a, #2563eb);
+    color: #fff;
+    padding: 26px 0;
+    margin-bottom: 24px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.stack-tag {
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="datetime-local"],
+select,
+textarea {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font: inherit;
+    color: inherit;
+    background: var(--surface);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.filters input[type="search"] {
+    width: 220px;
+}
+
+.btn {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+}
+
+.btn-ghost {
+    background: transparent;
+}
+
+.btn-danger {
+    color: var(--danger);
+}
+
+.btn-danger:hover:not(:disabled) {
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.btn-sm {
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+.table-wrap {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.col-id {
+    width: 60px;
+}
+
+.col-status {
+    width: 120px;
+}
+
+.col-priority {
+    width: 90px;
+}
+
+.col-time {
+    width: 150px;
+}
+
+.col-actions {
+    width: 130px;
+}
+
+.title-cell {
+    font-weight: 600;
+}
+
+.desc-cell {
+    color: var(--muted);
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.status-select {
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.status-select[data-status="DONE"] {
+    color: #047857;
+}
+
+.priority {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.priority-LOW {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.priority-MEDIUM {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.priority-HIGH {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.actions {
+    white-space: nowrap;
+    display: flex;
+    gap: 6px;
+}
+
+.empty-tip {
+    margin: 0;
+    padding: 48px 16px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.pager {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px 0 40px;
+    color: var(--muted);
+}
+
+.pager-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* ---------- 弹窗 ---------- */
+.dialog {
+    width: min(520px, calc(100% - 32px));
+    border: none;
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 24px 64px rgba(15, 23, 42, 0.24);
+}
+
+.dialog::backdrop {
+    background: rgba(15, 23, 42, 0.45);
+}
+
+.dialog h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.field span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.field em {
+    color: var(--danger);
+    font-style: normal;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-error {
+    margin: 4px 0 12px;
+    color: var(--danger);
+    font-size: 13px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* ---------- 轻提示 ---------- */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 36px;
+    transform: translateX(-50%);
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #111827;
+    color: #fff;
+    font-size: 13px;
+    box-shadow: var(--shadow);
+    z-index: 99;
+}
+
+.toast-error {
+    background: var(--danger);
+}

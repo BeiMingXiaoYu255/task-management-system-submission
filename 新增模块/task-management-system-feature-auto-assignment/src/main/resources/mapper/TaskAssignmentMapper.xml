@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cjlu.taskmanagement.mapper.TaskAssignmentMapper">
+
+    <update id="updateAssignment">
+        UPDATE task
+        SET required_skills = #{requiredSkills},
+            assignee_id     = #{assigneeId},
+            assign_status   = #{assignStatus},
+            updated_at      = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <select id="countActiveByAssignee" resultType="long">
+        SELECT COUNT(*)
+        FROM task
+        WHERE assignee_id = #{assigneeId}
+          AND status != 'DONE'
+    </select>
+
+</mapper>

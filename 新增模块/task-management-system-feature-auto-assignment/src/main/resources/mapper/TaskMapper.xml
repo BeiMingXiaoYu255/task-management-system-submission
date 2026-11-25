@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cjlu.taskmanagement.mapper.TaskMapper">
+
+    <sql id="Base_Column_List">
+        id, title, description, status, priority, due_date,
+        required_skills, assignee_id, assign_status, publisher_id, created_at, updated_at
+    </sql>
+
+    <!-- 列表查询的公共筛选条件 -->
+    <sql id="Query_Where">
+        <where>
+            <if test="query != null">
+                <if test="query.keyword != null and query.keyword != ''">
+                    AND (title LIKE CONCAT('%', #{query.keyword}, '%')
+                    OR description LIKE CONCAT('%', #{query.keyword}, '%'))
+                </if>
+                <if test="query.status != null">
+                    AND status = #{query.status}
+                </if>
+                <if test="query.priority != null">
+                    AND priority = #{query.priority}
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <select id="countByQuery" resultType="long">
+        SELECT COUNT(*)
+        FROM task
+        <include refid="Query_Where"/>
+    </select>
+
+    <select id="selectPage" resultType="cn.edu.cjlu.taskmanagement.entity.Task">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM task
+        <include refid="Query_Where"/>
+        ORDER BY (due_date IS NULL) ASC, due_date ASC, id DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectById" resultType="cn.edu.cjlu.taskmanagement.entity.Task">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM task
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="cn.edu.cjlu.taskmanagement.entity.Task"
+            useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO task (title, description, status, priority, due_date, created_at, updated_at)
+        VALUES (#{title}, #{description}, #{status}, #{priority}, #{dueDate}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <update id="update" parameterType="cn.edu.cjlu.taskmanagement.entity.Task">
+        UPDATE task
+        <set>
+            <if test="title != null">title = #{title},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="priority != null">priority = #{priority},</if>
+            <if test="dueDate != null">due_date = #{dueDate},</if>
+            <if test="updatedAt != null">updated_at = #{updatedAt},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateStatus">
+        UPDATE task
+        SET status     = #{status},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE
+        FROM task
+        WHERE id = #{id}
+    </delete>
+
+</mapper>

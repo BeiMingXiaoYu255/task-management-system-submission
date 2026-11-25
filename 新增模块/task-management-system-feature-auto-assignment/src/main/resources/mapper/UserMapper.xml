@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cjlu.taskmanagement.mapper.UserMapper">
+
+    <sql id="Base_Column_List">
+        id, username, password, nickname, role, created_at, updated_at
+    </sql>
+
+    <!-- 列表查询的公共筛选条件 -->
+    <sql id="Query_Where">
+        <where>
+            <if test="query != null">
+                <if test="query.role != null">
+                    AND role = #{query.role}
+                </if>
+                <if test="query.skill != null and query.skill != ''">
+                    AND id IN (SELECT user_id FROM user_skill WHERE skill_name = #{query.skill})
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <select id="countByQuery" resultType="long">
+        SELECT COUNT(*)
+        FROM `user`
+        <include refid="Query_Where"/>
+    </select>
+
+    <select id="selectPage" resultType="cn.edu.cjlu.taskmanagement.entity.User">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `user`
+        <include refid="Query_Where"/>
+        ORDER BY id ASC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectByUsername" resultType="cn.edu.cjlu.taskmanagement.entity.User">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `user`
+        WHERE username = #{username}
+    </select>
+
+    <select id="selectById" resultType="cn.edu.cjlu.taskmanagement.entity.User">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `user`
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectAllByRole" resultType="cn.edu.cjlu.taskmanagement.entity.User">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `user`
+        WHERE role = #{role}
+        ORDER BY id ASC
+    </select>
+
+    <insert id="insert" parameterType="cn.edu.cjlu.taskmanagement.entity.User"
+            useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO `user` (username, password, nickname, role, created_at, updated_at)
+        VALUES (#{username}, #{password}, #{nickname}, #{role}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <select id="selectSkillNamesByUserId" resultType="string">
+        SELECT skill_name
+        FROM user_skill
+        WHERE user_id = #{userId}
+        ORDER BY skill_name ASC
+    </select>
+
+    <insert id="insertSkills">
+        INSERT IGNORE INTO user_skill (user_id, skill_name)
+        VALUES
+        <foreach collection="skills" item="skill" separator=",">
+            (#{userId}, #{skill})
+        </foreach>
+    </insert>
+
+    <delete id="deleteSkillsByUserId">
+        DELETE
+        FROM user_skill
+        WHERE user_id = #{userId}
+    </delete>
+
+</mapper>
